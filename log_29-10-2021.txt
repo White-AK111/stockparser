@@ -1,0 +1,62 @@
+﻿29-10-2021 23:35:50 Start congiguration loading process.
+29-10-2021 23:35:50 Configuration loaded: 
+{
+  "stockURL": "https://www.moex.com",
+  "emailAddress": "formatmyc@gmail.com"
+}
+29-10-2021 23:35:50 Start web parsing process.
+29-10-2021 23:36:09 Get 23 rows of USD course. 
+Get 23 rows of EUR course.
+29-10-2021 23:36:09 Start process with Excel.
+29-10-2021 23:36:23 Successfully write data into Excel.
+29-10-2021 23:36:24 Start process send email.
+29-10-2021 23:36:28 End of process send email.
+29-10-2021 23:36:28 End process.
+29-10-2021 23:39:31 Start congiguration loading process.
+29-10-2021 23:39:31 Configuration loaded: 
+{
+  "stockURL": "https://www.moex.com",
+  "emailAddress": "formatmyc@gmail.com"
+}
+29-10-2021 23:39:31 Start web parsing process.
+29-10-2021 23:39:43 Get 23 rows of USD course. 
+Get 23 rows of EUR course.
+29-10-2021 23:39:43 Start process with Excel.
+29-10-2021 23:41:55 Start congiguration loading process.
+29-10-2021 23:41:55 Configuration loaded: 
+{
+  "stockURL": "https://www.moex.com",
+  "emailAddress": "formatmyc@gmail.com"
+}
+29-10-2021 23:41:55 Start web parsing process.
+29-10-2021 23:42:08 Get 23 rows of USD course. 
+Get 23 rows of EUR course.
+29-10-2021 23:42:08 Start process with Excel.
+29-10-2021 23:43:58 Start congiguration loading process.
+29-10-2021 23:43:58 Configuration loaded: 
+{
+  "stockURL": "https://www.moex.com",
+  "emailAddress": "formatmyc@gmail.com"
+}
+29-10-2021 23:43:58 Start web parsing process.
+29-10-2021 23:44:10 Get 23 rows of USD course. 
+Get 23 rows of EUR course.
+29-10-2021 23:44:11 Start process with Excel.
+29-10-2021 23:44:28 Successfully write data into Excel.
+29-10-2021 23:44:28 Start process send email.
+29-10-2021 23:44:32 End of process send email.
+29-10-2021 23:44:32 End process.
+29-10-2021 23:46:35 Start congiguration loading process.
+29-10-2021 23:46:36 Configuration loaded: 
+{
+  "stockURL": "https://www.moex.com",
+  "emailAddress": "formatmyc@gmail.com"
+}
+29-10-2021 23:46:36 Start web parsing process.
+29-10-2021 23:46:48 Get 23 rows of USD course. 
+Get 23 rows of EUR course.
+29-10-2021 23:46:48 Start process with Excel.
+29-10-2021 23:47:07 Successfully write data into Excel.
+29-10-2021 23:47:07 Start process send email.
+29-10-2021 23:47:11 End of process send email.
+29-10-2021 23:47:11 End process.

@@ -1,0 +1,12 @@
+﻿{
+  "Id": "KSA5M-WeeUG32klSHyBr8A",
+  "Reference": "luoXQ2fcJkSNYdTt8FJNYw/KSA5M-WeeUG32klSHyBr8A",
+  "ParentRef": "luoXQ2fcJkSNYdTt8FJNYw/aZsmaYKM_06VFBngJTqgxQ",
+  "Name": "menu Chrome: Московская Биржа",
+  "Type": "Screen",
+  "Created": "2021-10-29T12:12:12.3733926Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=21.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2021-10-29T12:12:12.3733926Z"
+}

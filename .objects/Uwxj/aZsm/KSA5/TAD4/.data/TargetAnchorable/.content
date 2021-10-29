@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetAnchorable BrowserURL="https://www.moex.com/" ContentHash="FCefGymUt0qGb1FWOHWnhg" DesignTimeRectangle="359, 229, 63, 39" FriendlyName="'A javascript:void(0)'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;span&amp;gt;a' isleaf='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='A' aaname='' /&gt;" Guid="652dbd31-10af-4057-992e-745e7a0a02c4" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Московская Биржа' /&gt;" SearchSteps="FuzzySelector, Image" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="ImageBase64" xmlns="">0I6797C1qCUK77lAwxRJV8w</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="d30d863bdc83d6cad3af74e114821189.png" xmlns="">06wKRxSLwIkinX0F7RLdeBw</imageRef>
+</TargetAnchorable>
