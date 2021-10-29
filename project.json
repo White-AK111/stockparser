@@ -3,10 +3,12 @@
   "description": "RPA, UiPath. Test task for Greenatom, parser moex.",
   "main": "Main.xaml",
   "dependencies": {
+    "System.Runtime.Serialization.Json": "[4.3.0]",
     "UiPath.Excel.Activities": "[2.11.4]",
     "UiPath.Mail.Activities": "[1.12.2]",
     "UiPath.System.Activities": "[21.10.2]",
-    "UiPath.UIAutomation.Activities": "[21.10.3]"
+    "UiPath.UIAutomation.Activities": "[21.10.3]",
+    "UiPath.WebAPI.Activities": "[1.9.2]"
   },
   "webServices": [],
   "entitiesStores": [],
