@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-16"?>
+<TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="iprCzK3RA0-B_9hp8oXtYw" Selector="&lt;html app='chrome.exe' title='Московская Биржа' /&gt;" Url="https://www.moex.com/" xmlns="http://schemas.uipath.com/workflow/activities/uix">
+  <imageRef attrName="IconBase64" xmlns="">0aCHcKZzvmUqf7KBD5VaU2w</imageRef>
+  <imageRef attrName="InformativeScreenshot" originalValue="56288a420a9c86b770fea3db69908deb.png" xmlns="">0-7Mv5YsGJ06lg-Df9oSUvw</imageRef>
+</TargetApp>

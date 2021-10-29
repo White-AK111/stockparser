@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1208,1054" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="1208,1214" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -33,6 +33,24 @@
       <x:String>System.Collections.Specialized</x:String>
       <x:String>UiPath.Web.Activities</x:String>
       <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -85,15 +103,25 @@
       <AssemblyReference>System.Security.Permissions</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart DisplayName="stockparser" sap:VirtualizedContainerService.HintSize="656,989" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="stockparser" sap:VirtualizedContainerService.HintSize="656,1149" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Name="workDir">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">C:\Users\forma\OneDrive\Документы\UiPath\stockparser\</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="C:\Users\forma\OneDrive\Документы\UiPath\stockparser\" Name="workDir" />
       <Variable x:TypeArguments="x:String" Name="stockURL">
         <Variable.Default>
           <Literal x:TypeArguments="x:String" Value="" />
@@ -111,12 +139,22 @@
       </Variable>
       <Variable x:TypeArguments="x:String" Name="config">
         <Variable.Default>
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">workDir + "config.jsonv"</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_56">workDir + "config.json"</CSharpValue>
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:String" Name="logFile">
         <Variable.Default>
           <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="dataUSD">
+        <Variable.Default>
+          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">new DataTable()</CSharpValue>
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Name="dataEUR">
+        <Variable.Default>
+          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">new DataTable()</CSharpValue>
         </Variable.Default>
       </Variable>
     </Flowchart.Variables>
@@ -127,13 +165,13 @@
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Width">622</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">310,77.5 310,117</av:PointCollection>
-        <x:Double x:Key="Height">953</x:Double>
+        <x:Double x:Key="Height">1113</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID8</x:Reference>
+      <x:Reference>__ReferenceID9</x:Reference>
     </Flowchart.StartNode>
-    <FlowStep x:Name="__ReferenceID8">
+    <FlowStep x:Name="__ReferenceID9">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">196,117</av:Point>
@@ -147,195 +185,124 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence sap:VirtualizedContainerService.HintSize="480,1796" sap2010:WorkflowViewState.IdRef="Sequence_10">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="438,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
-            <ui:LogMessage.Message>
-              <InArgument x:TypeArguments="x:Object">
-                <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">"Start congiguration loading process."</CSharpValue>
-              </InArgument>
-            </ui:LogMessage.Message>
-          </ui:LogMessage>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,651" sap2010:WorkflowViewState.IdRef="TryCatch_2">
-            <TryCatch.Try>
-              <Sequence DisplayName="create log file" sap:VirtualizedContainerService.HintSize="376,424" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">
-                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">logFile</CSharpReference>
-                    </OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_39">"log_" + DateTime.Now.ToString("dd-MM-yyyy_HH-mm-ss") + ".txt"</CSharpValue>
-                    </InArgument>
-                  </Assign.Value>
-                </Assign>
-                <ui:CreateFile ContinueOnError="{x:Null}" DisplayName="Create File" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="CreateFile_1">
-                  <ui:CreateFile.Name>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_40">logFile</CSharpValue>
-                    </InArgument>
-                  </ui:CreateFile.Name>
-                  <ui:CreateFile.Path>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_15">workDir</CSharpValue>
-                    </InArgument>
-                  </ui:CreateFile.Path>
-                </ui:CreateFile>
-                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_7">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">
-                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">logFile</CSharpReference>
-                    </OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_31">workDir + logFile</CSharpValue>
-                    </InArgument>
-                  </Assign.Value>
-                </Assign>
-              </Sequence>
-            </TryCatch.Try>
-            <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ActivityAction x:TypeArguments="s:Exception">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                  </ActivityAction.Argument>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Fatal">
-                    <ui:LogMessage.Message>
-                      <InArgument x:TypeArguments="x:Object">
-                        <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_18">"Can't creae log file"</CSharpValue>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="457,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info">
+          <ui:LogMessage.Message>
+            <InArgument x:TypeArguments="x:Object">
+              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_43">DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss ") +"Start congiguration loading process."</CSharpValue>
+            </InArgument>
+          </ui:LogMessage.Message>
+        </ui:LogMessage>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logger workflow" sap:VirtualizedContainerService.HintSize="457,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Logger.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="workDir">
+              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_166">workDir</CSharpValue>
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="msgTest">Start congiguration loading process.</InArgument>
+            <InOutArgument x:TypeArguments="x:String" x:Key="err">
+              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">err</CSharpReference>
+            </InOutArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="457,731" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+          <TryCatch.Try>
+            <Sequence DisplayName="deserialize JSON" sap:VirtualizedContainerService.HintSize="419,504" sap2010:WorkflowViewState.IdRef="Sequence_8">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="njl:JObject" Name="jsonConfig" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="377,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1">
+                <ui:DeserializeJson.JsonObject>
+                  <OutArgument x:TypeArguments="njl:JObject">
+                    <CSharpReference x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">jsonConfig</CSharpReference>
+                  </OutArgument>
+                </ui:DeserializeJson.JsonObject>
+                <ui:DeserializeJson.JsonString>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">System.IO.File.ReadAllText(config)</CSharpValue>
+                  </InArgument>
+                </ui:DeserializeJson.JsonString>
+              </ui:DeserializeJson>
+              <Assign sap:VirtualizedContainerService.HintSize="377,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">stockURL</CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">jsonConfig.GetValue("stockURL").ToString()</CSharpValue>
+                  </InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign sap:VirtualizedContainerService.HintSize="377,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">
+                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">emailAddress</CSharpReference>
+                  </OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">jsonConfig.GetValue("emailAddress").ToString()</CSharpValue>
+                  </InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logger workflow" sap:VirtualizedContainerService.HintSize="377,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Logger.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="workDir">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_168">workDir</CSharpValue>
+                  </InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="msgTest">
+                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_167">"Configuration loaded: \n" + jsonConfig.ToString()</CSharpValue>
+                  </InArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="err">
+                    <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">err</CSharpReference>
+                  </InOutArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </Sequence>
+          </TryCatch.Try>
+          <TryCatch.Catches>
+            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="423,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ActivityAction x:TypeArguments="s:Exception">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                </ActivityAction.Argument>
+                <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">
+                        <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">err</CSharpReference>
+                      </OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">exception.ToString()</CSharpValue>
                       </InArgument>
-                    </ui:LogMessage.Message>
-                  </ui:LogMessage>
-                </ActivityAction>
-              </Catch>
-            </TryCatch.Catches>
-          </TryCatch>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="438,882" sap2010:WorkflowViewState.IdRef="TryCatch_3">
-            <TryCatch.Try>
-              <Sequence DisplayName="deserialize JSON" sap:VirtualizedContainerService.HintSize="376,655" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                <Sequence.Variables>
-                  <Variable x:TypeArguments="njl:JObject" Name="jsonConfig" />
-                </Sequence.Variables>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:DeserializeJson x:TypeArguments="njl:JObject" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1">
-                  <ui:DeserializeJson.JsonObject>
-                    <OutArgument x:TypeArguments="njl:JObject">
-                      <CSharpReference x:TypeArguments="njl:JObject" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">jsonConfig</CSharpReference>
-                    </OutArgument>
-                  </ui:DeserializeJson.JsonObject>
-                  <ui:DeserializeJson.JsonString>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_4">System.IO.File.ReadAllText(config)</CSharpValue>
-                    </InArgument>
-                  </ui:DeserializeJson.JsonString>
-                </ui:DeserializeJson>
-                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">
-                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">stockURL</CSharpReference>
-                    </OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_13">jsonConfig.GetValue("stockURL").ToString()</CSharpValue>
-                    </InArgument>
-                  </Assign.Value>
-                </Assign>
-                <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
-                  <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">
-                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">emailAddress</CSharpReference>
-                    </OutArgument>
-                  </Assign.To>
-                  <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">jsonConfig.GetValue("emailAddress").ToString()</CSharpValue>
-                    </InArgument>
-                  </Assign.Value>
-                </Assign>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info">
-                  <ui:LogMessage.Message>
-                    <InArgument x:TypeArguments="x:Object">
-                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26" xml:space="preserve">"Configuration loaded: \n"  + jsonConfig.ToString()</CSharpValue>
-                    </InArgument>
-                  </ui:LogMessage.Message>
-                </ui:LogMessage>
-                <ui:AppendLine DisplayName="Append Line" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_1" UseDefaultEncoding="False">
-                  <ui:AppendLine.FileName>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_32">logFile</CSharpValue>
-                    </InArgument>
-                  </ui:AppendLine.FileName>
-                  <ui:AppendLine.Text>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_41" xml:space="preserve">DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss")  + " Configuration loaded: \n"  + jsonConfig.ToString()</CSharpValue>
-                    </InArgument>
-                  </ui:AppendLine.Text>
-                </ui:AppendLine>
-              </Sequence>
-            </TryCatch.Try>
-            <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ActivityAction x:TypeArguments="s:Exception">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
-                  </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_11">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">
-                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">err</CSharpReference>
-                        </OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">exception.ToString()</CSharpValue>
-                        </InArgument>
-                      </Assign.Value>
-                    </Assign>
-                  </Sequence>
-                </ActivityAction>
-              </Catch>
-            </TryCatch.Catches>
-          </TryCatch>
-        </Sequence>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </ActivityAction>
+            </Catch>
+          </TryCatch.Catches>
+        </TryCatch>
       </Sequence>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID0" DisplayName="Check error" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID1" DisplayName="Check error" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <FlowDecision.Condition>
             <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">String.IsNullOrEmpty(err)</CSharpValue>
           </FlowDecision.Condition>
@@ -345,7 +312,7 @@
               <av:Point x:Key="ShapeLocation">270.64166666666665,243</av:Point>
               <av:Size x:Key="ShapeSize">70,87</av:Size>
               <av:PointCollection x:Key="TrueConnector">270.64166666666665,286.5 114,286.5 114,322.53999999999996</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">340.64166666666665,286.5 500,286.5 500,887</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">340.64166666666665,286.5 500,286.5 500,1047</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <FlowDecision.True>
@@ -354,6 +321,7 @@
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">0,322.53999999999996</av:Point>
                   <av:Size x:Key="ShapeSize">228,66</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">228,355.53999999999996 309.64166666666665,355.53999999999996 309.64166666666665,438.53999999999996</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Sequence DisplayName="web (moex)" sap:VirtualizedContainerService.HintSize="228,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
@@ -362,154 +330,817 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logger workflow" sap:VirtualizedContainerService.HintSize="1236,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Logger.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="workDir">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_171">workDir</CSharpValue>
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="msgTest">Start web parsing process.</InArgument>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="err">
+                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_29">err</CSharpReference>
+                    </InOutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
+                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1236,2777" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                  <TryCatch.Try>
+                    <Sequence DisplayName="working with stock" sap:VirtualizedContainerService.HintSize="1198,2550" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Московская Биржа" sap:VirtualizedContainerService.HintSize="1156,2458" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="fac4d9dd-4e6d-4dcd-ab2f-9d11ad0e2698" Version="V1">
+                        <uix:NApplicationCard.Body>
+                          <ActivityAction x:TypeArguments="x:Object">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                            </ActivityAction.Argument>
+                            <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="1122,2242" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Участникам торгов'" sap:VirtualizedContainerService.HintSize="1080,2148" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="fac4d9dd-4e6d-4dcd-ab2f-9d11ad0e2698" Version="V1">
+                                <uix:NCheckState.IfExists>
+                                  <Sequence DisplayName="Целевой объект появляется" sap:VirtualizedContainerService.HintSize="722,1932" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'Участникам торгов'" sap:VirtualizedContainerService.HintSize="680,156" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fac4d9dd-4e6d-4dcd-ab2f-9d11ad0e2698" Version="V1">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www.moex.com/" DesignTimeRectangle="361, 231, 59, 35" FriendlyName="'A javascript:void(0)'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;span&amp;gt;a' isleaf='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='A' aaname='' /&gt;" Guid="f7077944-3dda-4511-a3da-1afadeae04bc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD8AAAAnCAYAAAC42pApAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJjSURBVGhD5ZThTtpgFIZ3QZuKiGKRlRVZCyswEEHUZA7dbmEhxD+LPze3SxjxKtyPiReAN0BIuJOz73z0nJVaFk37h9MveXLe9zukzaNJX8xmM0gqS+Wn0ylMJpPQnRQeyY8fHmB4cwODy0vonp6K49iXF+T/3N3B16srODo5EQvKU2b58XgM/cEAOsdd6HQVvtkO9FXeozzds/yv4VD96Ej/cD4JWR3lKbP8l34fWp22orNkEqu9R3m61/L4Ve99uoCD9qGiLXqiPHX+zzcPW9BsKUJmY8n9Ku5Rnu5ZvtE6SAQoT5nl681GIkB5yixfa7xPBChPmeWr9Rq4Cv8kgvervEd56izv1qvg1hTCp5b3OstXqu/+4fpyhB71BJ8XR0d56ixfdiuxE/WEPTMqKE+Z5Z1KGeyKszCdQJewR3nqLG+XnTlqYZdtsV3Le53lS85bKNmlWGfU89T3PGeiPHWW31cXcRP1hD0zKihPmeWLpSJYCukT5amzvLVvJQIt72WWL1iFcIohd37+s4969HMivF8T2KM8ZZY3LRPMN4oYZ9Tz1Pc8Z6I8dZZ/XchDXiF9ojx1ls+bamnuiZ9a3ussn8sbHjlfltdRnjLLG3uGYhcMdamn0I7y1Fl+N5eFrEL6RHnqLJ81dhKBlvcyy29nM4kA5SmzPH4BMztb4kF5yix/8fkc0tubsKVIZ7wpsKM8dZb/8fNaXabEM5efZ5a/vx9B7/wjpNLrokF5yiyP3P6+VX+AM9jYXBMLylNekEdGoxF8v/4GZ70P+ou4nnoFaxsvxUyUp/5IPkkkWH4GfwE+ypGbUf2EPgAAAABJRU5ErkJggg==" InformativeScreenshot="9489ad02ea5040412079e9755877a9f7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Московская Биржа' /&gt;" SearchSteps="FuzzySelector, Image">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="420, 231, 184, 35" ElementType="Text" FriendlyName="'Участникам торгов'" FullSelectorArgument="&lt;webctrl aaname='Участникам торгов' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Участникам торгов' tag='A' type='' check:text='Участникам торгов' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'Срочный рынок'" sap:VirtualizedContainerService.HintSize="680,156" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fac4d9dd-4e6d-4dcd-ab2f-9d11ad0e2698" Version="V1">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www.moex.com/" DesignTimeRectangle="361, 322, 198, 25" ElementType="Text" FriendlyName="'Срочный рынок'" FullSelectorArgument="&lt;webctrl aaname='Срочный рынок' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;span&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;a' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Срочный рынок' type='' tag='A' check:text='Срочный рынок' /&gt;" Guid="7dd79651-6e2a-4714-9377-649eabec2368" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAMoAAAAdCAYAAADrXvM/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQ7SURBVHhe7ZdNTxRBEIb9hYgH/4YiFy9y5MMTHMRfABivelG5ocYPlA+NEjkAQRJJIPEjhmgkGfuZ3nemdreHXdZdBac6eVPzVlVX9+xUdfVe2NnZyd6srmXD16YcDofB5evTxXNeKCvLr7Lh0ans0ujNgChLHuF2t9fNTqHInhfK65fLTZXkcDgSHaWtUEI1OXded14USuDeURyOCnTuKA6HI10oF0cmg2KyQk653e21s1MosntHcTgq0ENHqY9cfLaWrW9u53xj62M2PXe/q3ku/z9ZdpRJ21FQ2IrqHx+7fSc7/PIt0zj68TObmScB0/7/ktu97u4ftNmd14dXdpRBYGx2IU+83U8HhY5Tm2LhtLa+DsdZgjoK6Hj1Gq7Qd2u3RWH1FA5XHBXSxtZe9uv4OD/JdfXRfA388L/78Em2f/g5nP4L+fqLz9eiLXDiwpkPRw9nHnOYa/cxE/b19ftRrseP+bLTUSyX1HrEY9j3s+vD2Z/dR7H3sB/svJ/eS1zD6hUXjn79w3YRH2n3Z6Xbe7fnHaXBB95R+MAgZQP68Eo2EolnJKB4SB75EcsmGzFssuUJFbiNrfkqFLs+axaFEvy0V62d2jt+DJIVjo/87PqC3cdJe9ea6DSnNS6QzjFYnKqj/Knko9oO0SqVEDoh0XOSw3VycyKjh1NEL95uxmQzevnlCRU4+m46SlOhBD/mMw/fje29nFt/uw/+Z8GZSwy4XV/+dh+2ULDbQsGeel/FfbzyvngHG9/lYGTyz/zFkQkDHPvD+cCgyj42Ox+TKCSMdPhTKEBJhF4J+eDpapHc6Mtkm8/ntg7sWscO4k/P3WvrKK2y9f3senZfxGpdH67DgHn46oqpoVhV70sxKy4xTvP7O++dx0KJfOBXLz6srlVWr0JQEvGM3vIyIRsnrInFsx3yU4LbWHCe7WmsToLNFgo+8oOXhVL9Tpan1l8KnUD7IK46iuZq7/a5Kq6N7xgsKq5etqL6B53kMeGijg/NqUrSyB4TZD7XkRxIUN7Z2+PYeJpfJlJzt+K5LJSJkHyxk2CzhcLQGvCq9RhIOD7yS62/tPKu2AfrxEKJ3Qid9n7S+you+0aPRO8YHMqOMtFaKLai+sd1smqoSKyNRNBQomHnWSMmVDxtbfwy2WxHIVFtR4mJZwddS51FhVJ2Clso7esxBzDi2iR+/E9mB9zuo7lQ7N5LrhH18X3L94rduNyXUP37O++NJzvK0NXgGPC35Y1bMYEfkQQJ+1mURXKHvXfj7/J8SgpFfOBXr07QSR9Py7TPWUNzF0j7OM4/klevkyrLpcs6ynRHQWGqybnzuvOKjjJuQEU5d15vHjtK5B2vXoLb3V43e95RGryiozgcjrKjjDcXSnNFOXdeb578Mz90pVFJLl26zGVeKA3uVy+HowLpqxeVI2BMSbe7vUb2sqOMZ78BF7J6uRRf0k0AAAAASUVORK5CYII=" InformativeScreenshot="cd629ca802355f7538bdb06004d79250.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Московская Биржа' /&gt;" SearchSteps="FuzzySelector, Image">
+                                          <uix:TargetAnchorable.PointOffset>
+                                            <uix:PointOffset Y="-1" />
+                                          </uix:TargetAnchorable.PointOffset>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State first time" sap:VirtualizedContainerService.HintSize="680,466" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="1" Version="V1">
+                                      <uix:NCheckState.IfExists>
+                                        <Sequence DisplayName="Целевой объект появляется" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NClick ClickType="Single" DisplayName="Click 'Согласен'" sap:VirtualizedContainerService.HintSize="334,156" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fac4d9dd-4e6d-4dcd-ab2f-9d11ad0e2698" Version="V1">
+                                            <uix:NClick.Target>
+                                              <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/" DesignTimeRectangle="477, 199, 83, 32" ElementType="Text" FriendlyName="'Согласен'" FullSelectorArgument="&lt;webctrl aria-role='button' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='A' type='' aaname='Согласен' check:text='Согласен' /&gt;" Guid="4e93980b-dea1-4a50-971e-32de74a724e6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFcAAAAkCAYAAAD8fqYDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHQSURBVGhD7ZQxTsNAEEW5AeIKFFyHG1BzAUp6RENFQU1JT01FSY2UhgJBiogCkCyCYNE3/Gg8GhtF9iiG/JWewu6OxzPPy25UVVVEDpKbyELu5ea2GIBWuTdbO6IHkpuI5CYiuYlIbiKSm4jkJiK5iUhuIilyn6+uix2YR3H/ncHlVreT8vHyWu72D+o5fjFfR8GDyn08Pq1F4teuz84vGsLXhUHl4nTOH6ZlsrsX7hOeZg7Ixzo+yufb/Ge11LmmJ2eNWAzE8APiXYjj8B/RXlG2tq4a3mdPixzMz/1lGFQurgQQ7REWy2sCRVOWbwzgb6xRpp8jD98Z5bayWZ+PQy7ERTX8Kbm2Ecxto74x8JtcC/aQm9La6oneg7iohtHIRXEoBAVF+8Cfpr5ykY8D/wGUa/MyF7HP2AHByGuvJo6Vy0Vh9lRG6z6mj1wv0M+XOblte8y5crkAzUQnk016ASi6687Fmv0YkVzm5om0uW0tWEf8/eFRowbsIw5zX8Oo5AIUaQebIGyGg4X7xigLzaFJPku5NgaDJ5Wyga3FivY18JnRyxXfSG4ikpuI5CYiuYlIbiKSm4jkJiK5iUhuIpKbSKdc0Z9QrhgeyU2jKl91ceFMXWRxfQAAAABJRU5ErkJggg==" InformativeScreenshot="e6966206b1f2e8b6290f93266793d655.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Срочный рынок — Московская Биржа | Рынки' /&gt;" SearchSteps="FuzzySelector, Image">
+                                                <uix:TargetAnchorable.Anchors>
+                                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                    <uix:Target DesignTimeRectangle="563, 199, 100, 32" ElementType="Text" FriendlyName="'Не согласен'" FullSelectorArgument="&lt;webctrl aaname='Не согласен' aria-role='button' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Не согласен' aria-role='button' tag='A' type='' check:text='Не согласен' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGgAAAAkCAYAAABlhn+2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHZSURBVGhD7ZU9SgRBFIS9gXgFA6/jDYy9gJcwMTIwNjTXSDAyNBY2MdINFhEVBld0pAaeFM/undllf0qoBx/b/aa7p/pV9+xW0zSt0cUGifNr0OX2rhGiaNDdzp4RwAaJY4PEsUHi2CBxbJA4NkgcGySODRJnaQY9HB61X2/v7eT8YlDeDMMGiWODxNmIQc39qI1Am8dnamOfjk/b749pl8cv+jmPmD6O2/HJWaeBY9acrGkRDZ+T527v6I/2DzodixzSpRtUixD3enPbiYXoEI5cXm/W2Gw6cugjn4sD0EYuCsj9XDzksFaMHaoBvzUN+R3zsNYbVBKKdhSA53ExOA8wJ4qBPr8jFyee1wyKMQHWiNvQp4F1897+rUHRzsHFLs3jPOBTnccuYhB/wrAOwLM+DaVAHnP5kxlRWqePjd+gGjF21TcIYG48436fBj4kDOayhnn2nVmrQejn04/TW9toaSworYk+8rk4gIuOPp6xQTjtsRbW5z/8oRp4HbT/rUEAG4yIwvIchsdyoaIgCC5oLg7ei+C5eBYG5Xe8XF3P1FvTgIibljVIGGRWgw0SxwaJY4PEsUHi2CBxbJA4NkgcGySODRLHBolTNcjo8Mcgo4kNkqZpfwB6mmegwpIoMgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                                  </scg:List>
+                                                </uix:TargetAnchorable.Anchors>
+                                              </uix:TargetAnchorable>
+                                            </uix:NClick.Target>
+                                          </uix:NClick>
+                                        </Sequence>
+                                      </uix:NCheckState.IfExists>
+                                      <uix:NCheckState.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="&lt;webctrl aria-role='button' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='button' tag='A' type='' aaname='Согласен' check:text='Согласен' /&gt;" Guid="ec024e32-17ea-443c-a1f9-fcc6808f9822" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Срочный рынок — Московская Биржа | Рынки' /&gt;" SearchSteps="FuzzySelector" />
+                                      </uix:NCheckState.Target>
+                                    </uix:NCheckState>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'Индикативные курсы'" sap:VirtualizedContainerService.HintSize="680,156" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fac4d9dd-4e6d-4dcd-ab2f-9d11ad0e2698" Version="V1">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/" DesignTimeRectangle="380, 674, 164, 13" ElementType="Text" FriendlyName="'Индикативные курсы'" FullSelectorArgument="&lt;webctrl aaname='Индикативные курсы' parentid='ctl00_frmLeftMenuWrap' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Индикативные курсы' parentid='ctl00_frmLeftMenuWrap' tag='DIV' type='' check:text='Индикативные курсы' /&gt;" Guid="91a6809e-a100-411d-9caf-523bccc7d7d4" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKgAAAARCAYAAABJjucJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALMSURBVGhD7ZZBbuMwDEXner2NL9ELBJilNz2Ad9lm9gGyyA2KAj1DlqpIiuInJaeDCdp6DC0+IskUJX0+y/l1u93S0NBWNQAd2rQGoEObVgX09fiSpuO7D7gs6Wl6ScsbjA0NfaPuAPqeluffA9ChH9UqoNR/mk8ZUgWUgEVYr+kA8HL8REAXzVeJo1tY21nn2Z5R+3ChcXkZ6vp8c1sujgljoiWd305pej6l15Kf91H6vBbE1/xhDueGObInlOzPxvXlFbXxGqP+kFc57k9el/ZcY2hc+rTudDxxHOcFz0h4FvOsd3n4uvzv6gNKBeRDognRkBZQB1gPUM5r5lcYmhifV+Gp+bDvYBMQ+rDBfh8ElGHB83WBML/MG58Hzy0Aah45h8axB84fgjrWQ7V7QMVEa+thoyEtoD3jrV3mH31RDpc1o4sAnm4fYON8+RZy/Qob7bfcXg8B6uHxz1B6Llg3y3z2a1G7elbizLd7+eP4zgFlY2rx0AQxSj8zIjPiPIMpPUDjL8+RPNF8Ha9agYn7Clv87eRRMOQW8s8QUDfeQCKAupismrtK/Qqw1P15cGldzGGAxhdC1dZD5u8Z0Hlxn9cWUHyGRtAzM7sFFP7LBkDJeP2t8VC4BsjYLwVfNEcA1AorBY0xMWd/Dsz9awDUL/0N4/AlIdG6/T6ujYp5dV87BrS9CdCENUNyG6BjYZ/a9IZjv7QNBspVoOR4BVSK8ymglF/HvhzQAFNZ3+aowK+wnnqNczhnPTf5cW89ygv56xzq7xlQLBoLTVgx5CoF0s8MimF3wGV1AcVPmsAgOXL+C+W/c6PWgkEfYHN70nkBmAiomwN7MqBwj73Pu8bYvihvjeM9w5n0OX/Bejn9erIPP2ZzdgroPysWu4j/MnQLN2Qvo405gIeqBqDfLLmh/e2p48OvVo8DOjT0hRqADm1aA9ChDeuWPgCh5mDudy39FwAAAABJRU5ErkJggg==" InformativeScreenshot="6aa24823e9de1b1fb456f7691df5b2fb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Срочный рынок — Московская Биржа | Рынки' /&gt;" SearchSteps="FuzzySelector, Image">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="361, 668, 215, 25" ElementType="Text" FriendlyName="'Индикативные курсы'" FullSelectorArgument="&lt;webctrl aaname='                                                                *' href='/ru/derivatives/currency-rate.aspx?currency=USD_RUB' parentid='ctl00_frmLeftMenuWrap' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='                                                                *' href='/ru/derivatives/currency-rate.aspx?currency=USD_RUB' parentid='ctl00_frmLeftMenuWrap' tag='A' type='' check:text='Индикативные курсы' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANsAAAAdCAYAAAAjMhnpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN1SURBVHhe7ZexjhMxEIZ5vXsKXiEFPABFHoBIlEHielY0EV2gDopQ3mA5KRRQIGhSmp0Zjz3jdcKFXHyn5C8+7dprj732fPHmWd/3Yb36Ena7HQDggSG3yDECsgFwRiAbAI2AbAA0ArIB0AjIBkAjIBsAjYBsADQCsgHQiLPL1i9uw2Sx9fXrLtxMbkN3Z+oAuHAeQbZt6KZvIBu4OprLRuWb+XIQTmUj+ax4mzAzInL7CckZmW+kHZ2Oej+wmudndD9bU72IncbnEzXH4jZFndCF1d0yTKbL0Mf4PI9Y5rFM+xS/6MOxTR+Zk0Xml+v1h0gYt9c2uj60VkO7T8O4NOfUhuqlTONOFktux3HNmhH2XfKa1X4I/b6A42krGyUjb5jd0HJzx7I5WWqycdycSCmxR218XBUhxbNlJ44kdV0cM98TZePEt+9XTe68XnltfBz73iKTxpH30Ha8Bm59SNByP5Trk+3X7z8Hy8fSUDZJiHyvG1du7li2WhLl+9h/4RNstt6XNBEjQrVsxOF4w+ngykkcmm88VU6SzYvgn1n0vcy4A3md/Vh0n9Ystsvrdih+WX99sr2cdeHD5698T9cXr9+P2hxDM9l4k1Mi2g2VTddPGSFv6mpuNrgmW3nlPhKnTCStT+wRg8sqTnmtxNEkl9PBP7OyufpRwotsrs1Aip3Q9SoSP83PS0jj2hhZtlJuZbwf0v/6ZOu3P8LzV+/C9O1HvlK51u6+tJFt3rlPuLFs9pndVHqWE2csm/nvV8hGSaTX1N4k4UiushyTt9MYhWw5SSU5yzZlzHof0/feyazrpdei3pzwBI1bL9uxLWVcndf1yUZ8+/6TT7RTRSOayDb+hbYbum9zh3sjEGPLdE+/vLYc73NiU6woGLdX2STR/ikbxde6s8tWiBHHz30Us17FeLrWtg/HTO9N63FoPIpr4qc+VL5O2R6SNrLZBGTshu7Z3I0km37KWFhcJ89AVbY4PtdLYkuMIf6a4h846VLymbIRx81J+xXJX8rm+pg5ZTnsHGufkNomz4vipnY8Z/NO+py/LGox/XgyD1+X+0C2Uzm7bP9NmbgR/iytJiHIPyy5zskIHhXIdiHIyelPNa3Hej0Nnq5sAFwYkA2ARkA2ABoB2QBoBGQDoBGQDYBGQDYAGgHZAGgEZAOgEVm2PvwFS0FC9HO18SsAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NSelectItem DisplayName="Select Item 'Выберите валюты' USD" sap:VirtualizedContainerService.HintSize="680,156" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="USD/RUB - Доллар США к российскому рублю" ScopeIdentifier="fac4d9dd-4e6d-4dcd-ab2f-9d11ad0e2698" Version="V1">
+                                      <uix:NSelectItem.Items>
+                                        <scg:List x:TypeArguments="x:String" Capacity="18">
+                                          <x:String>USD/RUB - Доллар США к российскому рублю</x:String>
+                                          <x:String>EUR/RUB - Евро к российскому рублю</x:String>
+                                          <x:String>CAD/RUB - Канадский доллар к российскому рублю</x:String>
+                                          <x:String>CHF/RUB - Швейцарский франк к российскому рублю</x:String>
+                                          <x:String>JPY/RUB - Японская йена к российскому рублю</x:String>
+                                          <x:String>CNY/RUB - Китайский юань к российскому рублю</x:String>
+                                          <x:String>TRY/RUB - Турецкая лира к российскому рублю</x:String>
+                                          <x:String>UAH/RUB - Украинская гривна к российскому рублю</x:String>
+                                          <x:String>INR/RUB – Индийская рупия к российскому рублю</x:String>
+                                          <x:String>HKD/RUB - Гонконгский доллар к российскому рублю</x:String>
+                                          <x:String>USD/CAD - Доллар США к канадскому доллару</x:String>
+                                          <x:String>USD/CHF - Доллар США к швейцарскому франку</x:String>
+                                          <x:String>USD/JPY - Доллар США к японской йене</x:String>
+                                          <x:String>USD/CNY - Доллар США к китайскому юаню</x:String>
+                                          <x:String>USD/TRY - Доллар США к турецкой лире</x:String>
+                                          <x:String>USD/UAH - Доллар США к украинской гривне</x:String>
+                                          <x:String>USD/INR - Доллар США к индийской рупии</x:String>
+                                          <x:String>USD/HKD - Доллар США к гонконгскому доллару</x:String>
+                                        </scg:List>
+                                      </uix:NSelectItem.Items>
+                                      <uix:NSelectItem.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=USD_RUB" DesignTimeRectangle="937, 432, 384, 19" ElementType="DropDown" FriendlyName="'USD/RUB -'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="5bb0fa64-f152-4c4b-8dc9-2bdf66d1ef21" InformativeScreenshot="a535c4567e316d82414ba184a2bb1b23.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="FuzzySelector">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="794, 432, 138, 14" ElementType="Text" FriendlyName="'Выберите валюты'" FullSelectorArgument="&lt;webctrl aaname='Выберите валюты:' parentname='usdratesfm' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Выберите валюты:' parentname='usdratesfm' tag='DIV' type='' check:text='Выберите валюты:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI4AAAASCAYAAACNWeYwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJgSURBVGhD7ZYBroMgDIbfnTzXvIrZTfQky46xZHfgQSmlLahINNt76ZeQDGkLLb91P84wOjDhGF2YcIwudoXzXkY3DIMao5tfaHCAMlZfHOPztAnnNrs3zgNRAJN74rwF8Lkf8TC+mS7huNfsxkPd4u3mm3WX/0R/x6FnQRSDmx4wkTwmtHu6KXSoMKfPlOpYIMbKJyyJdMm+45JOo/eOc+hsYq88ku3zzp6vdkKMx/xFLcSZ/eBx9BoMzJnqEokdHG3wuXhGI9Slpd7q9wV0/sfhl94qHO9XFCvFiesUAy4d19IFJF+cR1u1N/h5WyGEEFt2u5rwsxg5Ojduq9aSwIXgWZ34XF8wswNBFwJkcYozMXjci+n7VEGyqUgtiShhAMyvSJitCaFEcnH53rGrzeG8m8KpnHe14Nq24psQNfE0CifkIkS75QfsnKGax/n0CQcPz9+8akeiRMq3nseodzWMD4WTvmCvhBOeUaxN4UQRl/vxy0lUcmO1EJ87/x/uUMdhMYUIGoXD/ct6X89pwuHJ0+VRIqWN8NtKGAonfYuOs3gb9N8XTu0sa2zkBufSQjkgHDzvGR2nrPf1XPKpqiaikgIbKkjsAhQDioVz/E1i4Gu4N39raW+i7HY6JxBiteB7wslrsfuwfaBG+8LRdvmlQLgf8JeEEy5OjXzwfHl5VArkkbF4MTxJIDjoLYTno5vu2Te/obg3KzQVkSiFE4gXnYY6C1HLLcfiMaZHFj/luSaArbroi18RDtnDqMS9WES7wvk4KBx98cZnMeEYXZhwjC6+XzjGV2LCMTpw7hc0Vf75qbVl6QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NSelectItem.Target>
+                                    </uix:NSelectItem>
+                                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data USD" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Дата' ReferenceName='Дата' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Курс промежуточного клиринга Значение' ReferenceName='Курс промежуточного клиринга Значение' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Курс промежуточного клиринга Время' ReferenceName='Курс промежуточного клиринга Время' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Курс основного клиринга Значение' ReferenceName='Курс основного клиринга Значение' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator=',' ThousandsSeparator='' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Курс основного клиринга Время' ReferenceName='Курс основного клиринга Время' ReferenceIdx='4'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Дата' attr='text' /&gt;&lt;column name='Курс промежуточного клиринга Значение' attr='text' /&gt;&lt;column name='Курс промежуточного клиринга Время' attr='text' /&gt;&lt;column name='Курс основного клиринга Значение' attr='text' /&gt;&lt;column name='Курс основного клиринга Время' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="680,156" sap2010:WorkflowViewState.IdRef="NExtractData_3" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="fac4d9dd-4e6d-4dcd-ab2f-9d11ad0e2698" Version="V1">
+                                      <uix:NExtractData.DataTable>
+                                        <InOutArgument x:TypeArguments="sd:DataTable">
+                                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">dataUSD</CSharpReference>
+                                        </InOutArgument>
+                                      </uix:NExtractData.DataTable>
+                                      <uix:NExtractData.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="854, 493, 433, 530" FriendlyName="'Дата Курс'" FullSelectorArgument="&lt;webctrl aaname='Дата Курс промежуточного клиринга Курс основного клиринга Значен*' parentname='usdratesfm' tag='TABLE' /&gt;" Guid="ded6686a-6e0d-4c62-b3e7-3a50cd420d2a" InformativeScreenshot="b20a17dd58968fc278cf92954bc46a17.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="Selector" />
+                                      </uix:NExtractData.Target>
+                                    </uix:NExtractData>
+                                    <uix:NSelectItem DisplayName="Select Item 'Выберите валюты' EUR" sap:VirtualizedContainerService.HintSize="680,156" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="EUR/RUB - Евро к российскому рублю" ScopeIdentifier="fac4d9dd-4e6d-4dcd-ab2f-9d11ad0e2698" Version="V1">
+                                      <uix:NSelectItem.Items>
+                                        <scg:List x:TypeArguments="x:String" Capacity="18">
+                                          <x:String>USD/RUB - Доллар США к российскому рублю</x:String>
+                                          <x:String>EUR/RUB - Евро к российскому рублю</x:String>
+                                          <x:String>CAD/RUB - Канадский доллар к российскому рублю</x:String>
+                                          <x:String>CHF/RUB - Швейцарский франк к российскому рублю</x:String>
+                                          <x:String>JPY/RUB - Японская йена к российскому рублю</x:String>
+                                          <x:String>CNY/RUB - Китайский юань к российскому рублю</x:String>
+                                          <x:String>TRY/RUB - Турецкая лира к российскому рублю</x:String>
+                                          <x:String>UAH/RUB - Украинская гривна к российскому рублю</x:String>
+                                          <x:String>INR/RUB – Индийская рупия к российскому рублю</x:String>
+                                          <x:String>HKD/RUB - Гонконгский доллар к российскому рублю</x:String>
+                                          <x:String>USD/CAD - Доллар США к канадскому доллару</x:String>
+                                          <x:String>USD/CHF - Доллар США к швейцарскому франку</x:String>
+                                          <x:String>USD/JPY - Доллар США к японской йене</x:String>
+                                          <x:String>USD/CNY - Доллар США к китайскому юаню</x:String>
+                                          <x:String>USD/TRY - Доллар США к турецкой лире</x:String>
+                                          <x:String>USD/UAH - Доллар США к украинской гривне</x:String>
+                                          <x:String>USD/INR - Доллар США к индийской рупии</x:String>
+                                          <x:String>USD/HKD - Доллар США к гонконгскому доллару</x:String>
+                                        </scg:List>
+                                      </uix:NSelectItem.Items>
+                                      <uix:NSelectItem.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www.moex.com/ru/derivatives/currency-rate.aspx?currency=USD_RUB" DesignTimeRectangle="937, 432, 384, 19" ElementType="DropDown" FriendlyName="'USD/RUB -'" FullSelectorArgument="&lt;webctrl tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' type='' aaname='' /&gt;" Guid="5bb0fa64-f152-4c4b-8dc9-2bdf66d1ef21" InformativeScreenshot="a535c4567e316d82414ba184a2bb1b23.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="FuzzySelector">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="794, 432, 138, 14" ElementType="Text" FriendlyName="'Выберите валюты'" FullSelectorArgument="&lt;webctrl aaname='Выберите валюты:' parentname='usdratesfm' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Выберите валюты:' parentname='usdratesfm' tag='DIV' type='' check:text='Выберите валюты:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAI4AAAASCAYAAACNWeYwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJgSURBVGhD7ZYBroMgDIbfnTzXvIrZTfQky46xZHfgQSmlLahINNt76ZeQDGkLLb91P84wOjDhGF2YcIwudoXzXkY3DIMao5tfaHCAMlZfHOPztAnnNrs3zgNRAJN74rwF8Lkf8TC+mS7huNfsxkPd4u3mm3WX/0R/x6FnQRSDmx4wkTwmtHu6KXSoMKfPlOpYIMbKJyyJdMm+45JOo/eOc+hsYq88ku3zzp6vdkKMx/xFLcSZ/eBx9BoMzJnqEokdHG3wuXhGI9Slpd7q9wV0/sfhl94qHO9XFCvFiesUAy4d19IFJF+cR1u1N/h5WyGEEFt2u5rwsxg5Ojduq9aSwIXgWZ34XF8wswNBFwJkcYozMXjci+n7VEGyqUgtiShhAMyvSJitCaFEcnH53rGrzeG8m8KpnHe14Nq24psQNfE0CifkIkS75QfsnKGax/n0CQcPz9+8akeiRMq3nseodzWMD4WTvmCvhBOeUaxN4UQRl/vxy0lUcmO1EJ87/x/uUMdhMYUIGoXD/ct6X89pwuHJ0+VRIqWN8NtKGAonfYuOs3gb9N8XTu0sa2zkBufSQjkgHDzvGR2nrPf1XPKpqiaikgIbKkjsAhQDioVz/E1i4Gu4N39raW+i7HY6JxBiteB7wslrsfuwfaBG+8LRdvmlQLgf8JeEEy5OjXzwfHl5VArkkbF4MTxJIDjoLYTno5vu2Te/obg3KzQVkSiFE4gXnYY6C1HLLcfiMaZHFj/luSaArbroi18RDtnDqMS9WES7wvk4KBx98cZnMeEYXZhwjC6+XzjGV2LCMTpw7hc0Vf75qbVl6QAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NSelectItem.Target>
+                                    </uix:NSelectItem>
+                                    <uix:NExtractData AppendResults="False" ContinueOnError="True" DisplayName="Extract Table Data EUR" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Дата' ReferenceName='Дата' ReferenceIdx='0'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Курс промежуточного клиринга Значение' ReferenceName='Курс промежуточного клиринга Значение' ReferenceIdx='1'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' IsDeleted='true' Name='Курс промежуточного клиринга Время' ReferenceName='Курс промежуточного клиринга Время' ReferenceIdx='2'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Курс основного клиринга Значение' ReferenceName='Курс основного клиринга Значение' ReferenceIdx='3'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator=',' ThousandsSeparator='' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Курс основного клиринга Время' ReferenceName='Курс основного клиринга Время' ReferenceIdx='4'&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Дата' attr='text' /&gt;&lt;column name='Курс промежуточного клиринга Значение' attr='text' /&gt;&lt;column name='Курс промежуточного клиринга Время' attr='text' /&gt;&lt;column name='Курс основного клиринга Значение' attr='text' /&gt;&lt;column name='Курс основного клиринга Время' attr='text' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="680,156" sap2010:WorkflowViewState.IdRef="NExtractData_4" LimitExtractionTo="Rows" MaximumResults="0" ScopeIdentifier="fac4d9dd-4e6d-4dcd-ab2f-9d11ad0e2698" Version="V1">
+                                      <uix:NExtractData.DataTable>
+                                        <InOutArgument x:TypeArguments="sd:DataTable">
+                                          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_16">dataEUR</CSharpReference>
+                                        </InOutArgument>
+                                      </uix:NExtractData.DataTable>
+                                      <uix:NExtractData.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="854, 593, 433, 552" FriendlyName="'Дата Курс'" FullSelectorArgument="&lt;webctrl aaname='Дата Курс промежуточного клиринга Курс основного клиринга Значен*' parentname='usdratesfm' tag='TABLE' /&gt;" Guid="9f6b4d73-6685-4dc0-b8cb-5ccebaaacbb6" InformativeScreenshot="df7258cd123a5b8b600dbad2df8053bb.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Индикативные курсы валют — Московская Биржа | Рынки' /&gt;" SearchSteps="Selector" />
+                                      </uix:NExtractData.Target>
+                                    </uix:NExtractData>
+                                  </Sequence>
+                                </uix:NCheckState.IfExists>
+                                <uix:NCheckState.IfNotExists>
+                                  <Sequence DisplayName="Целевой объект не появляется" sap:VirtualizedContainerService.HintSize="304,155" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Assign sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:String">
+                                          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_11">err</CSharpReference>
+                                        </OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss ") + "Can't load course data."</CSharpValue>
+                                        </InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                  </Sequence>
+                                </uix:NCheckState.IfNotExists>
+                                <uix:NCheckState.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://www.moex.com/" DesignTimeRectangle="361, 231, 59, 35" FriendlyName="'A javascript:void(0)'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;span&amp;gt;a' isleaf='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' isleaf='1' tag='A' aaname='' /&gt;" Guid="96df28dc-edf5-496a-aef6-82d12cd7f3fb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD8AAAAnCAYAAAC42pApAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJjSURBVGhD5ZThTtpgFIZ3QZuKiGKRlRVZCyswEEHUZA7dbmEhxD+LPze3SxjxKtyPiReAN0BIuJOz73z0nJVaFk37h9MveXLe9zukzaNJX8xmM0gqS+Wn0ylMJpPQnRQeyY8fHmB4cwODy0vonp6K49iXF+T/3N3B16srODo5EQvKU2b58XgM/cEAOsdd6HQVvtkO9FXeozzds/yv4VD96Ej/cD4JWR3lKbP8l34fWp22orNkEqu9R3m61/L4Ve99uoCD9qGiLXqiPHX+zzcPW9BsKUJmY8n9Ku5Rnu5ZvtE6SAQoT5nl681GIkB5yixfa7xPBChPmeWr9Rq4Cv8kgvervEd56izv1qvg1hTCp5b3OstXqu/+4fpyhB71BJ8XR0d56ixfdiuxE/WEPTMqKE+Z5Z1KGeyKszCdQJewR3nqLG+XnTlqYZdtsV3Le53lS85bKNmlWGfU89T3PGeiPHWW31cXcRP1hD0zKihPmeWLpSJYCukT5amzvLVvJQIt72WWL1iFcIohd37+s4969HMivF8T2KM8ZZY3LRPMN4oYZ9Tz1Pc8Z6I8dZZ/XchDXiF9ojx1ls+bamnuiZ9a3ussn8sbHjlfltdRnjLLG3uGYhcMdamn0I7y1Fl+N5eFrEL6RHnqLJ81dhKBlvcyy29nM4kA5SmzPH4BMztb4kF5yix/8fkc0tubsKVIZ7wpsKM8dZb/8fNaXabEM5efZ5a/vx9B7/wjpNLrokF5yiyP3P6+VX+AM9jYXBMLylNekEdGoxF8v/4GZ70P+ou4nnoFaxsvxUyUp/5IPkkkWH4GfwE+ypGbUf2EPgAAAABJRU5ErkJggg==" InformativeScreenshot="766b43b9058329c1638cfa9d88c17bd5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Московская Биржа' /&gt;" SearchSteps="FuzzySelector">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                        <uix:Target DesignTimeRectangle="420, 231, 184, 35" ElementType="Text" FriendlyName="'Участникам торгов'" FullSelectorArgument="&lt;webctrl aaname='Участникам торгов' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Участникам торгов' tag='A' type='' check:text='Участникам торгов' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NCheckState.Target>
+                              </uix:NCheckState>
+                            </Sequence>
+                          </ActivityAction>
+                        </uix:NApplicationCard.Body>
+                        <uix:NApplicationCard.TargetApp>
+                          <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALeSURBVFhH7VZdSJNRGDbopqzs15+UbtIsS820giIq7CYNyiiKoC7M6CbqosCL/oMEi3IkWagFUQpBdGEEYj/qNgtTHGXloppmumopbljmfp/e8/MtNz7nqkkX7YGHne+cZ+d9znve75wvQj93Gf4ZE7IQNvCfG4jPDGcgSANxGdDNTlUf8+fvaIPJgHZGCvTR6WhZngPtzMWqGi9Z8Og0tK7I5f/TzVqirlM4pgGazLB+O/pr6+GyDcJYcASNkYnqWgreOCUJnWdK4Br8hs+37qIlcyM3r6pnDLQFOlqtIXsHPA4HFHicThj3qphgwSMp+MkLUing+NqP5tRs6Oek+eoVBsqAdvoitOcVyKl+gZno4CaShFZZ+Snf4AwepwutK3NHr4mxDLzYnC+nApwDNtkiuFww5h9G49RkmXaNHBBwWoXW/WOY105IDHzUVKCn9Lp4sDsw1PoShlVbYDp+XvRJvC88C8ud+7wdUgPdF8tRP3EezFdvwv7qHSxXqmGt08tRgS4qwMcTEtBXU8efQ5sBWn3DpPm8OI27DsL28IkcYfDwTLDt0E5LRt+9B7w3tAYuXePVz9h5ukT2ClhrtTCszqOaWABt1MJxMqCpxKOIOHQVlcoeARttg6WsitfEm/2FtAXx42PgQ/FlKrAi+SRgOlqMjp0HqCbe0kvvpIhuvN5zCJbbNXw8pAaGu3tlS4AdOg2TE3lN9JbdkL1UDcN22M1fePuvDbRv3ccn8ofphCg4dgjpY5byc99cWS1HR8DlpoNo058ZYCtrW7sN7u9DcjYB07Fz4hRkwRV9TDo3bK7wNWHv+YTmlHX8Thk5t5eBDDAy521r8jDQ8JRyK181/+AKmYkoMlFexd5Kfhg9S9sA3Wj3AGMw3wMsvU0kfJ6zmwzR9aoWXCGZaKJfrqWrmF/H8So6hWNlwMtYsc/6OJUxf8Zm0HcD0wYwqjBoA+PF8EdpOANhAwlZ+AnZYkxwxkiZagAAAABJRU5ErkJggg==" InformativeScreenshot="b5f4c10698328bce6b7106f68197a8ae.png" Selector="&lt;html app='chrome.exe' title='Московская Биржа'/&gt;">
+                            <uix:TargetApp.Url>
+                              <InArgument x:TypeArguments="x:String">
+                                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_51">stockURL</CSharpValue>
+                              </InArgument>
+                            </uix:TargetApp.Url>
+                          </uix:TargetApp>
+                        </uix:NApplicationCard.TargetApp>
+                      </uix:NApplicationCard>
+                    </Sequence>
+                  </TryCatch.Try>
+                  <TryCatch.Catches>
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1202,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ActivityAction x:TypeArguments="s:Exception">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                        </ActivityAction.Argument>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_12">err</CSharpReference>
+                            </OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">exception.ToString()</CSharpValue>
+                            </InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </ActivityAction>
+                    </Catch>
+                  </TryCatch.Catches>
+                </TryCatch>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logger workflow" sap:VirtualizedContainerService.HintSize="1236,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Logger.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="workDir">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_173">workDir</CSharpValue>
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="msgTest">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_172">"Get " + dataUSD.Rows.Count.ToString() + " rows of USD course. \n" + "Get " + dataEUR.Rows.Count.ToString() + " rows of EUR course."</CSharpValue>
+                    </InArgument>
+                    <InOutArgument x:TypeArguments="x:String" x:Key="err">
+                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">err</CSharpReference>
+                    </InOutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                </ui:InvokeWorkflowFile>
               </Sequence>
+              <FlowStep.Next>
+                <FlowDecision x:Name="__ReferenceID3" DisplayName="Check error" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                  <FlowDecision.Condition>
+                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">String.IsNullOrEmpty(err)</CSharpValue>
+                  </FlowDecision.Condition>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <av:Point x:Key="ShapeLocation">274.64166666666665,438.53999999999996</av:Point>
+                      <av:Size x:Key="ShapeSize">70,87</av:Size>
+                      <av:PointCollection x:Key="FalseConnector">344.64166666666665,482.03999999999996 500,482.03999999999996 500,1047</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">274.64166666666665,482.03999999999996 114,482.03999999999996 114,518.0799999999999</av:PointCollection>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <FlowDecision.True>
+                    <FlowStep x:Name="__ReferenceID4">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">0,518.0799999999999</av:Point>
+                          <av:Size x:Key="ShapeSize">228,66</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">114,584.0799999999999 114,614.0799999999999 314.14166666666665,614.0799999999999 314.14166666666665,674.0799999999999</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="excel" sap:VirtualizedContainerService.HintSize="228,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence.Variables>
+                          <Variable x:TypeArguments="x:Boolean" Name="bExist" />
+                        </Sequence.Variables>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logger workflow" sap:VirtualizedContainerService.HintSize="652,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Logger.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="workDir">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_174">workDir</CSharpValue>
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="msgTest">Start process with Excel.</InArgument>
+                            <InOutArgument x:TypeArguments="x:String" x:Key="err">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_31">err</CSharpReference>
+                            </InOutArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="652,2836" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                          <TryCatch.Try>
+                            <Sequence DisplayName="export data to excel" sap:VirtualizedContainerService.HintSize="614,2609" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:FileExistsX DisplayName="File Exists" sap:VirtualizedContainerService.HintSize="572,132" sap2010:WorkflowViewState.IdRef="FileExistsX_1">
+                                <ui:FileExistsX.Exists>
+                                  <OutArgument x:TypeArguments="x:Boolean">
+                                    <CSharpReference x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">bExist</CSharpReference>
+                                  </OutArgument>
+                                </ui:FileExistsX.Exists>
+                                <ui:FileExistsX.Path>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_113">workDir + DateTime.Now.ToString("dd-MM-yyyy") + ".xlsx"</CSharpValue>
+                                  </InArgument>
+                                </ui:FileExistsX.Path>
+                              </ui:FileExistsX>
+                              <If sap:VirtualizedContainerService.HintSize="572,348" sap2010:WorkflowViewState.IdRef="If_1">
+                                <If.Condition>
+                                  <InArgument x:TypeArguments="x:Boolean">
+                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_114">bExist</CSharpValue>
+                                  </InArgument>
+                                </If.Condition>
+                                <If.Then>
+                                  <Sequence DisplayName="delete duplicate file" sap:VirtualizedContainerService.HintSize="376,171" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:Delete ContinueOnError="{x:Null}" sap:VirtualizedContainerService.HintSize="334,79" sap2010:WorkflowViewState.IdRef="Delete_1">
+                                      <ui:Delete.Path>
+                                        <InArgument x:TypeArguments="x:String">
+                                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_111">workDir + DateTime.Now.ToString("dd-MM-yyyy") + ".xlsx"</CSharpValue>
+                                        </InArgument>
+                                      </ui:Delete.Path>
+                                    </ui:Delete>
+                                  </Sequence>
+                                </If.Then>
+                                <If.Else>
+                                  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </If.Else>
+                              </If>
+                              <ui:CopyFile ContinueOnError="{x:Null}" DisplayName="Copy File template" sap:VirtualizedContainerService.HintSize="572,158" sap2010:WorkflowViewState.IdRef="CopyFile_2" Overwrite="True">
+                                <ui:CopyFile.Destination>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_132">workDir + DateTime.Now.ToString("dd-MM-yyyy") + ".xlsx"</CSharpValue>
+                                  </InArgument>
+                                </ui:CopyFile.Destination>
+                                <ui:CopyFile.Path>
+                                  <InArgument x:TypeArguments="x:String">
+                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_131" xml:space="preserve">workDir  + "Template.xlsx"</CSharpValue>
+                                  </InArgument>
+                                </ui:CopyFile.Path>
+                              </ui:CopyFile>
+                              <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="572,1759" sap2010:WorkflowViewState.IdRef="SequenceX_2">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="510,1647" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" TemplatePath="Template.xlsx" UseTemplate="True">
+                                  <ueab:ExcelApplicationCard.Body>
+                                    <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                      <ActivityAction.Argument>
+                                        <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                      </ActivityAction.Argument>
+                                      <Sequence DisplayName="write data to excel" sap:VirtualizedContainerService.HintSize="476,1356" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                                        <ueab:WriteRangeX DisplayName="Записать DataTable в Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="WriteRangeX_5" IgnoreEmptySource="False">
+                                          <ueab:WriteRangeX.Destination>
+                                            <InArgument x:TypeArguments="ue:IReadWriteRangeRef">
+                                              <CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_135">Excel.Sheet["Лист1"].Range["A2:C24"]</CSharpValue>
+                                            </InArgument>
+                                          </ueab:WriteRangeX.Destination>
+                                          <ueab:WriteRangeX.Source>
+                                            <InArgument x:TypeArguments="sd:DataTable">
+                                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_134">dataUSD</CSharpValue>
+                                            </InArgument>
+                                          </ueab:WriteRangeX.Source>
+                                        </ueab:WriteRangeX>
+                                        <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                        <ueab:WriteRangeX DisplayName="Записать DataTable в Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,158" sap2010:WorkflowViewState.IdRef="WriteRangeX_6" IgnoreEmptySource="False">
+                                          <ueab:WriteRangeX.Destination>
+                                            <InArgument x:TypeArguments="ue:IReadWriteRangeRef">
+                                              <CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_137">Excel.Sheet["Лист1"].Range["D2:F24"]</CSharpValue>
+                                            </InArgument>
+                                          </ueab:WriteRangeX.Destination>
+                                          <ueab:WriteRangeX.Source>
+                                            <InArgument x:TypeArguments="sd:DataTable">
+                                              <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_136">dataEUR</CSharpValue>
+                                            </InArgument>
+                                          </ueab:WriteRangeX.Source>
+                                        </ueab:WriteRangeX>
+                                        <uix:NClick ClickType="Single" DisplayName="Click 'Развернуть'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Excel" Version="V1">
+                                          <uix:NClick.InScope>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_138">Excel</CSharpValue>
+                                            </InArgument>
+                                          </uix:NClick.InScope>
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable DesignTimeRectangle="1347, 1, 46, 34" FriendlyName="'Развернуть'" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' omit:title='29-10-2021.xlsx - Excel' /&gt;&lt;uia automationid='Grid' name='Сетка' role='сетка данных' /&gt;&lt;uia automationid='A1' name='&amp;quot;A&amp;quot; 1' role='элемент' tableCol='1' tableRow='1' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Панель инструментов Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Развернуть' role='Кнопка' automationid='' check:fulltext='Развернуть' /&gt;" Guid="104fe31e-8ff5-4a1a-9cc0-96e4211ea350" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADIAAAAlCAYAAAAA7LqSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIBSURBVFhH3ZlNToNAFIC5SttraKK2egU3LtUYf6MuvIC36lrXLrxI9QDIhx06MG8GZhgY0pd8sQ3vPfh4MNCYzV7P8n0gm18e5S5mTyux0MrLab64ORF7AdvIkWrnDyuxpqLYLtXRL65IIgn6xhNJKEFOu4jUoEliCYgjcr8Ua2EMCYgjUjC/NScylgQ4RRZXx3IzC7rMmBLgnggHIzV0gMzYEhBdxMVQEmxzi9wt5cYBDClBjlOE1Uhs7snQEuS6RXxfTwrW3595W6y/Pnb7iSABbhEtsSvEwftF+VmaxOHbeZlTfo8kAXaRa7+lV0Hw13U5ETElwC5SLKPN5C6ogxR7biGk2lAJbgG7iO2MtUCI/RRFX8Ko7SHBg9sqMnv2vz/UQUr9SrYnh6jV9pQgRxYJuD/U5UQY/UCbMFHVRpAAWcT3Qfi4uyeIWi/QJIBQn2NIgChColHsQmtMsMRW/RoSLM2E+i69NYOPBBgiJBnFXdjugIddW/DQ1GubMr4SYE6kz/uVvqPGJNpQMiESYIhQYDTxgfrinhG3tcG7XYAEJ60mUp6NZpPUdJAgrz4Rz8thcDpKQCVCgTjWVHhIwG4iEX9E9cZTAkqRSU0jQAL+JzKVaQRKQDaZafSQgGwS0+gpwfb0/x+JIEFeWpFIEpBOJKIEZL8/m3wf2BORTf4HmRA8ksmZ3HMAAAAASUVORK5CYII=" InformativeScreenshot="4406bd5ae785f4cee50d2c0d6ee61fe6.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Template.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="1393, 1, 46, 34" FriendlyName="'Закрыть'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Панель инструментов Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Закрыть' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Панель инструментов Ribbon' /&gt;&lt;uia cls='NetUIAppFrameHelper' name='Закрыть' role='Кнопка' automationid='' check:fulltext='Закрыть' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAlCAYAAADr2wGRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFbSURBVFhH3dZBSsNAFIfxuYr2Iiq1J1FwUwQ9gaCHcCd4uIJCtLaux34Tpsk4ry7SeYu/i2/TyQv5kaSTcHK/iOqViLvLOLu5iKdXZ2ascUwxQ7fzOLs+N2dSy3k9M4p1c24X5+X81lxuQIgCqEcIAyioAyioAyhYJyIVAJkIJQBVCDUAFQhFAO0RqgBKCGUApb/YloDV53tcvj4dBCyfH+Kqe2sGoLTZVQtH3AEAH9t1utjfc/yW1l4ezdmp1V+xDR6hdLGbEuIFoBLRAJCPHUM8ATQgGgJyGeIJoB7hAKB8BzoQu3fFmm1R8AZwBwB0336Q4A3Ix3pCzA/AVENAzgtiIyYCiI3sr5cYABuitTa1GnEEgEeTd8ya86xECAJoQIgCqEcIAyioA6j+ABylAKCDCBUAmQglAFUINQAVCEUA7RGqAEoIZQClfcK6eFIAUNh8raNy/wSxiD9dGu8mameQlwAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                        <uix:NClick ClickType="Single" DisplayName="Click 'A'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Excel" Version="V1">
+                                          <uix:NClick.InScope>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_139">Excel</CSharpValue>
+                                            </InArgument>
+                                          </uix:NClick.InScope>
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable DesignTimeRectangle="8, 244, 26, 20" FriendlyName="'Выделить все'" FullSelectorArgument="&lt;uia automationid='Grid' name='Сетка' role='сетка данных' /&gt;&lt;uia name='Выделить все' role='элемент заголовка' tableCol='0' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Grid' name='Сетка' role='сетка данных' /&gt;&lt;uia name='Выделить все' role='элемент заголовка' automationid='' check:fulltext='Выделить все' /&gt;" Guid="011defdb-b567-4726-9ec7-4328081b114e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB4AAAAYCAYAAADtaU2/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFBSURBVEhL3dV9i0RQFAbw/f7fQIiUaEZKhEhNMxMpEb6Dr3F2jz1Od7QvzNj7x9566rm6t1/e35YBH2OaJmkh9p/DwzBwJ1YO3HUdd2LlwE3TcCdWDlzXNXdi/wYex/FhXpYld2KPhxGNoujh2O12407ssfCCruHL5cKd2ONgEV3DRVFwJ/YYeI2u4SzLuBP7OvwVuoaTJOFO7GvwdyhGXCfOiX0e/gnFiGuDIOBO7HPwbyhGXO/7Pndi98NbUIy453w+cyd2H7wVxYj7XNflTux2eA+KEffats2d2Ocfrj2xLIs7sXJgwzC4EysH1jSNO7GfMN6/vu+hbdv5p43/z6qq4H6/w/V6nT/y+L3N8xzSNIU4jiEMw/n9xFfF8zw4nU7gOM58P/HSmqYJuq6DqqqgKAqHWDlnjOAyiJUNA7wDGJBz0pLZDCcAAAAASUVORK5CYII=" InformativeScreenshot="250ec46b898c226633501a2767ad3ee9.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Template.xlsx - Excel' /&gt;" SearchSteps="FuzzySelector, Image">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="34, 244, 37, 20" FriendlyName="'A'" FullSelectorArgument="&lt;uia automationid='Grid' name='Сетка' role='сетка данных' /&gt;&lt;uia name='A' role='Заголовок столбца' tableCol='1' tableRow='0' /&gt;" FuzzySelectorArgument="&lt;uia automationid='Grid' name='Сетка' role='сетка данных' /&gt;&lt;uia name='A' role='Заголовок столбца' automationid='' check:fulltext='A' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAYCAYAAABnRtT+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFNSURBVFhH1ZRRpsQwFECzqCwnm8kyqkOplFJKKaWUUimllC6i27hvcsdwb18+XjIfL1MOqZyP40YiruuC1PmeyPM8vZv/CW3CyOM4mJACtAkj931nQgrQJozcto0JKUCbMHJdVyakAG3CyGVZmJACtAkj53lmQixGCRBCgDL+/RBoE0ZO08SEOAwoIUEpCUIZz34YtAkjx3FkQhRGgZAarNUghQLjcwKgTRg5DAMTYnBHLbV9ri1o+V773b9AmzCy73smBIPTk6Dt69/q55G7qd69AGgTRnZdx4RQfkXdomOgTRjZti0Twngdr7vVdz45ctqEkU3TMCEId2E8U8PpfnCBaBNG1nXNhBDwbfQ+Oe5Jin8zaRNGVlXFhBSgTRhZliUTUoA2YWRRFExIAdqEkY/HgwkpQJtEnueQZVnS4CTdIrXPvbPv7wsiAX4AiBfCl3j9NRsAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                        <uix:NClick ClickType="Single" DisplayName="Click 'Вставить ячейки'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_11" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Excel" Version="V1">
+                                          <uix:NClick.InScope>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_140">Excel</CSharpValue>
+                                            </InArgument>
+                                          </uix:NClick.InScope>
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable DesignTimeRectangle="1549, 75, 48, 73" FriendlyName="'Формат'" FullSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' /&gt;&lt;uia cls='MsoCommandBar' helpText='Панель инструментов Ribbon' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Главная' /&gt;&lt;uia cls='NetUIChunk' name='Ячейки' /&gt;&lt;uia cls='NetUIAnchor' name='Формат' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Панель инструментов Ribbon' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Главная' /&gt;&lt;uia cls='NetUIChunk' name='Ячейки' /&gt;&lt;uia cls='NetUIAnchor' name='Формат' role='Пункт меню' automationid='' check:fulltext='Формат' /&gt;" Guid="bb650933-abf7-4013-a262-a8afd596278e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAABNCAYAAADpVUfiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIHSURBVGhD7Zc9TgMxEIVzEs6BUiPEDRCipAXRICEahKCkAnEDBD1dRMEN+DkITaBLs+RFepIzmawT724yRK/4JNuzM57P3oTQ+/0ZVpuEhKIjoei0JrR1++6uL0KTXEurQk3wapagG4qOhPr97ZXi9VBHkdBoNHK5OD9z1+uoy5HQGAlJKIOEMhQJoQmP3tFLEV4tsPYbQnM3b99LgRyvFpDQGAlJKIOEMhQJeV+xAM2V4NUCa78hNOGt11GXI6ExEpJQBgllKBJaJV4PdSwtFB0JRUdC0ZFQdCQUHQlFJyu0t7tTfX1+uLGIzBU6PNifyKR4z0XDFTo9Oa6ury4nY97Q89Pjv5CaEXodDKYapxDGEIUYxlhDjHCdOTwA8HB/NxVDHc4B4ljH3pgjzlwe7KJvjCuEZM6RSCEUZ3N4xsrxOYzZ9LwYmweYo166RtJcb26ZEWIDnKcFsDEk7C2mMZvjxTDmyaMWDikVQhzPkVTU1rYUfYaaCiHGtwD7cI66GKe17c3Z2hZXCKAQklPSOOZskk1wI4z5alI+jWGMOGQgi3U2DrjG3FaEyLwCWEOM2E3RLGMUZyyVY156EzxMiLV2Q03IbdolElqEjRNaJxKKjoSiI6HodCaEnyv4e8SfLXbeFZ3eECXsP3Bd0vkrt6qbIfoMRUdC0ZFQdCQUHQlFR0KxGVZ/OrBhxBRHfvUAAAAASUVORK5CYII=" InformativeScreenshot="426a6c859a6e6ebfba05ccf1113a5654.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Template.xlsx - Excel' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="1439, 73, 166, 95" FriendlyName="'Вставить ячейки'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Панель инструментов Ribbon' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Главная' /&gt;&lt;uia cls='NetUIChunk' name='Ячейки' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Панель инструментов Ribbon' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Главная' /&gt;&lt;uia cls='NetUIChunk' name='Ячейки' role='Группа' automationid='' check:fulltext='Вставить ячейки&amp;#x9;Дополнительные параметры&amp;#x9;&amp;#xD;&amp;#xA;Удалить ячейки...&amp;#x9;Дополнительные параметры&amp;#x9;&amp;#xD;&amp;#xA;Формат' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                        <uix:NClick ClickType="Single" DisplayName="Click 'Высота строки...'" sap:VirtualizedContainerService.HintSize="434,156" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="Excel" Version="V1">
+                                          <uix:NClick.InScope>
+                                            <InArgument x:TypeArguments="x:Object">
+                                              <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_141">Excel</CSharpValue>
+                                            </InArgument>
+                                          </uix:NClick.InScope>
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable DesignTimeRectangle="1551, 266, 266, 28" FriendlyName="'Автоподбор ширины'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Панель инструментов Ribbon' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Главная' /&gt;&lt;uia cls='NetUIChunk' name='Ячейки' /&gt;&lt;uia cls='NetUITWMenuItemGroup' idx='2' /&gt;&lt;uia cls='NetUITWBtnMenuItem' name='Автоподбор ширины столбца' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Панель инструментов Ribbon' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Главная' /&gt;&lt;uia cls='NetUIChunk' name='Ячейки' /&gt;&lt;uia cls='NetUITWMenuItemGroup' /&gt;&lt;uia cls='NetUITWBtnMenuItem' name='Автоподбор ширины столбца' role='Пункт меню' automationid='' check:fulltext='Автоподбор ширины столбца' /&gt;" Guid="b6cda152-5f09-4e30-88a6-7f3071fc93fa" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQ4AAAAgCAYAAADjYJZXAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOISURBVHhe7Zr9bdswEMW7S51RjAzieA8jYwTOFgGSAYIgfxVFF2L1SJE8no6k2XxAqt8Dfqgo6khad3qUgv54f3t1FEVRlwqeQeOgKGpIhXH8+f2LEEKaQDQOQsgQEI2DEDIEROMghAwB0TgIIUNANA5CyBAQjYMQMgRE4yCEDAHROAghQ0CbMo7Hu527uXsw+1bN88nd7qa170/uxeon3wvz8SGg7RgHkr0/uON+7+6fjf41wgJdF8zHpwBtxjheTnt3e3pK/1rXrIsnd7/fuePZ6iPfD/PxWUAbMQ4kfX7T8G8ecsd4cEfsIrufAd8XiiSd8xzcI66Pu858PheSGscj3m6qcTo2xuDcwd1PRhdjCsNrrmMa45z7baOcr0tvX6122QfzLdc5HZvzXRA397Xmy9TOgzJnx/O/5HA5zmX5aP2W+RM5jrfFT+VPBtqGcRRmIUzEt2WSQ3H44lr0xbbYdXwBytjWuLW4ud+vT8TMxV0WZxyjNV7oS6/Ti7kiYq5uWx1P9++y+Xpx8di4tuizrpGEh/1yg2zlQtaHiO3mQ88h273z1wW0CePQnyd+50vOHwog7gipoFKfSLQvHmksYTfpFk8zbuJ8mNfTjkm/Y2gdaq5EY72Ldj4OY9l9cWxrLXac3NlBva/22zzG/ciomF4u/PWxX8S28rFYl2ojv4vfeL1AGzAOJFEXKDCKo/k2MjH0wIp2p1jtMXBcKdShdYTdOD8YkcZ6F+35GJ8j2uAWcXK+kbhGHx48/UbmY2aM+5FRMZ1c5LnQ1muq5GOxLtEu5tP1dZ1A6zeOohAiRnH7ZOqHzCoI0V8URaN4unH2GCjo/KYkx+iNJ+KMByWPV1uvbocx7b9PhD57vl5cPO709Yxjzlu+VxJrntq9s+55jm3nQ88xt2X9+bms9V8X0OqNo0x2Jn+uhAJIbyLpEwbogpjwyY/XV4rFaptxau6EfvDC+eJ3dNZxvMt/xEsPSUFtbkm5TvuBas3Xj9PrlvPZ65AxkjKmXIOKMe9dMJ9yk9Gx5RzaROL5DPI4j4v21v47wBcBrf+NY9Wg4PTbgHVuBF3sX813z7cVPprH/xeIxvEh6sax3L0y5RgaGsc6oHHUgGgcq4PGQdYNROMghAwB0TgIIUNANA5CyBAQjYMQMgRE4yCEDAHROAghQ0A0DkLIEFBhHBRFUZeIxkFR1LDe317dX6ChED7sh+aIAAAAAElFTkSuQmCC" InformativeScreenshot="f036b923dc2f144cd617fb256bfe0066.png" ScopeSelectorArgument="&lt;wnd app='excel.exe' cls='XLMAIN' title='Template.xlsx - Excel' /&gt;" SearchSteps="FuzzySelector, Image">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="1549, 75, 48, 73" FriendlyName="'Высота строки...'" FullSelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Панель инструментов Ribbon' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Главная' /&gt;&lt;uia cls='NetUIChunk' name='Ячейки' /&gt;&lt;uia cls='NetUIAnchor' name='Формат' /&gt;" FuzzySelectorArgument="&lt;uia cls='MsoCommandBar' helpText='Панель инструментов Ribbon' /&gt;&lt;uia cls='NetUIOrderedGroup' name='Главная' /&gt;&lt;uia cls='NetUIChunk' name='Ячейки' /&gt;&lt;uia cls='NetUIAnchor' name='Формат' role='Пункт меню' automationid='' check:fulltext='Высота строки...&amp;#x9;Автоподбор высоты строки&amp;#x9;&amp;#xD;&amp;#xA;Ширина...&amp;#x9;Автоподбор ширины столбца&amp;#x9;Ширина по умолчанию.' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAABNCAYAAADpVUfiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ3SURBVGhD7ZfNahNRFMfnSXwO6VrEB1B8ABVcS6G4U2OsHxspPoCIL6CIS1cifrSh+ARaxX4lbVN32VzzG/jDzXCcSTrJ9E44gV+49545557f3Gk7zf6eDsMysbxCTx8/ajWm0PftXitxoWm48GzLXJ+GOrmwMKE6WDWnxU8odVwoZmXlYqNYPRSpLTQajUzurq2a62WU5biQC41xoQpcyKC2EE1YZDfenAmrFpz7CdFc50N/JsixaoELudAYF6rAhQxqC1m/YoHmzoJVC879hGjCWi+jLMeFXGiMC1XgQga1hZrE6qFILaEUcaHUcaHUcaHUcaHUcaHUmUnoyuVL4f27t2YsFaYSun7tai4TE8dTolLo9q2bYW31Tj7WCb3YeJ6sVKnQ61cvJxqXEGNEEWPMGjGhdeXoBkC3c38iRh3NgTjr7M2cuHJ1Y8uemEohknUxiRKiuJrjmqKcrmOspv8XU/PAnHrxmohzrTmUCqkBXRwXYGMkiqcYx4o5Voyx7jy1uEmxEHGuE7FosTaUCgENlP0M1RUipqeAfTSnLuO4dvHkirWhUggoRHJMHGeuJtWENmKsR1PycYwxcWSQZV2Ng9aUOxchYRUA1oiJ4qY0q5jEFYvllBefhG4mYnM7oTpYmy4SF5qVpRNqGhdKHRdKHRdKnUaEeF3h75FeW4rzedLYCUmi+A/cvGlMCBZ5MqJRoSZwodRxodRxodSZEDodngR4st4N273NVkLvw5PjnIyv46NBWO92Qm/za9j69qV10Pugf5iTHQ36oX94kL+ePHxwr7Xs7f7JyQ7298LvXzvh86ePS0G2v7cbdn7+yCft/4TwDw3xO7CBXjlMAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                      </Sequence>
+                                    </ActivityAction>
+                                  </ueab:ExcelApplicationCard.Body>
+                                  <ueab:ExcelApplicationCard.WorkbookPath>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_133">workDir + DateTime.Now.ToString("dd-MM-yyyy") + ".xlsx"</CSharpValue>
+                                    </InArgument>
+                                  </ueab:ExcelApplicationCard.WorkbookPath>
+                                </ueab:ExcelApplicationCard>
+                              </ueab:SequenceX>
+                            </Sequence>
+                          </TryCatch.Try>
+                          <TryCatch.Catches>
+                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="618,21" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ActivityAction x:TypeArguments="s:Exception">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                </ActivityAction.Argument>
+                                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+                                  <Assign.To>
+                                    <OutArgument x:TypeArguments="x:String">
+                                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">err</CSharpReference>
+                                    </OutArgument>
+                                  </Assign.To>
+                                  <Assign.Value>
+                                    <InArgument x:TypeArguments="x:String">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_124">exception.ToString()</CSharpValue>
+                                    </InArgument>
+                                  </Assign.Value>
+                                </Assign>
+                              </ActivityAction>
+                            </Catch>
+                          </TryCatch.Catches>
+                        </TryCatch>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logger workflow" sap:VirtualizedContainerService.HintSize="652,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Logger.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="workDir">
+                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_175">workDir</CSharpValue>
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="msgTest">Successfully write data into Excel.</InArgument>
+                            <InOutArgument x:TypeArguments="x:String" x:Key="err">
+                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">err</CSharpReference>
+                            </InOutArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                      <FlowStep.Next>
+                        <FlowDecision x:Name="__ReferenceID5" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
+                          <FlowDecision.Condition>
+                            <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_128">String.IsNullOrEmpty(err)</CSharpValue>
+                          </FlowDecision.Condition>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <av:Point x:Key="ShapeLocation">274.64166666666665,674.0799999999999</av:Point>
+                              <av:Size x:Key="ShapeSize">79,87</av:Size>
+                              <av:PointCollection x:Key="TrueConnector">274.64166666666665,717.5799999999999 114,717.5799999999999 114,793.6199999999999</av:PointCollection>
+                              <av:PointCollection x:Key="FalseConnector">353.64166666666665,717.5799999999999 500,717.5799999999999 500,1047</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <FlowDecision.True>
+                            <FlowStep x:Name="__ReferenceID6">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <av:Point x:Key="ShapeLocation">0,793.6199999999999</av:Point>
+                                  <av:Size x:Key="ShapeSize">228,66</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">114,859.6199999999999 114,889.6199999999999 314.14166666666665,889.6199999999999 314.14166666666665,929.6199999999999</av:PointCollection>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Sequence DisplayName="send email" sap:VirtualizedContainerService.HintSize="632,1592" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                <Sequence.Variables>
+                                  <Variable x:TypeArguments="x:String" Name="strCount" />
+                                </Sequence.Variables>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logger workflow" sap:VirtualizedContainerService.HintSize="590,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Logger.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="x:String" x:Key="workDir">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_169">workDir</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="msgTest">Start process send email.</InArgument>
+                                    <InOutArgument x:TypeArguments="x:String" x:Key="err">
+                                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">err</CSharpReference>
+                                    </InOutArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                                <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="590,1196" sap2010:WorkflowViewState.IdRef="TryCatch_7">
+                                  <TryCatch.Try>
+                                    <Sequence sap:VirtualizedContainerService.HintSize="552,969" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:InvokeCode ContinueOnError="{x:Null}" Code="var titles = new[] {nominativ, genetiv, plural};&#xA;var cases = new[] {2, 0, 1, 1, 1, 2};&#xA;strCount = titles[number % 100 &gt; 4 &amp;&amp; number % 100 &lt; 20 ? 2 : cases[(number % 10 &lt; 5) ? number % 10 : 5]];" DisplayName="Invoke code для хороших окончаний" sap:VirtualizedContainerService.HintSize="510,164" sap2010:WorkflowViewState.IdRef="InvokeCode_4" Language="CSharp">
+                                        <ui:InvokeCode.Arguments>
+                                          <InArgument x:TypeArguments="x:Int32" x:Key="number">23</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="nominativ">строка</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="genetiv">строки</InArgument>
+                                          <InArgument x:TypeArguments="x:String" x:Key="plural">строк</InArgument>
+                                          <OutArgument x:TypeArguments="x:String" x:Key="strCount">
+                                            <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">strCount</CSharpReference>
+                                          </OutArgument>
+                                        </ui:InvokeCode.Arguments>
+                                      </ui:InvokeCode>
+                                      <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="formatmyc@gmail.com" DisplayName="Use Gmail" EmailAddress="formatmyc@gmail.com" sap:VirtualizedContainerService.HintSize="510,673" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="False">
+                                        <umab:GmailApplicationCard.Body>
+                                          <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="send email by gmail" sap:VirtualizedContainerService.HintSize="476,494" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <umab:SendMailX Bcc="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" BodyType="Text" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,402" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" UseDocumentAsBody="False">
+                                                <umab:SendMailX.Account>
+                                                  <InArgument x:TypeArguments="um:IMailQuickHandle">
+                                                    <CSharpValue x:TypeArguments="um:IMailQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_160">Gmail</CSharpValue>
+                                                  </InArgument>
+                                                </umab:SendMailX.Account>
+                                                <umab:SendMailX.Body>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_183">"В приложенном файле сводка содержащая " + dataUSD.Rows.Count.ToString() + " " + strCount + " по курсам валют за последний месяц."</CSharpValue>
+                                                  </InArgument>
+                                                </umab:SendMailX.Body>
+                                                <umab:SendMailX.Files>
+                                                  <scg:List x:TypeArguments="InArgument(x:String)" Capacity="1">
+                                                    <InArgument x:TypeArguments="x:String">
+                                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_162">workDir + DateTime.Now.ToString("dd-MM-yyyy") + ".xlsx"</CSharpValue>
+                                                    </InArgument>
+                                                  </scg:List>
+                                                </umab:SendMailX.Files>
+                                                <umab:SendMailX.HtmlBodyFromFile>
+                                                  <umabh:HtmlContentArgument FilePath=".data/HtmlContent0.html">
+                                                    <umabh:HtmlContentArgument.RuntimeImages>
+                                                      <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                                                    </umabh:HtmlContentArgument.RuntimeImages>
+                                                    <umabh:HtmlContentArgument.ValueMappings>
+                                                      <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="0" />
+                                                    </umabh:HtmlContentArgument.ValueMappings>
+                                                  </umabh:HtmlContentArgument>
+                                                </umab:SendMailX.HtmlBodyFromFile>
+                                                <umab:SendMailX.Subject>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_181">"Сводка по курсам валют USD/EUR от " + DateTime.Now.ToString("dd.MM.yyyy") + "."</CSharpValue>
+                                                  </InArgument>
+                                                </umab:SendMailX.Subject>
+                                                <umab:SendMailX.To>
+                                                  <InArgument x:TypeArguments="x:String">
+                                                    <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_161">emailAddress</CSharpValue>
+                                                  </InArgument>
+                                                </umab:SendMailX.To>
+                                              </umab:SendMailX>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </umab:GmailApplicationCard.Body>
+                                        <umab:GmailApplicationCard.ClientId>
+                                          <InArgument x:TypeArguments="x:String">
+                                            <Literal x:TypeArguments="x:String" Value="" />
+                                          </InArgument>
+                                        </umab:GmailApplicationCard.ClientId>
+                                        <umab:GmailApplicationCard.ClientSecret>
+                                          <InArgument x:TypeArguments="x:String">
+                                            <Literal x:TypeArguments="x:String" Value="" />
+                                          </InArgument>
+                                        </umab:GmailApplicationCard.ClientSecret>
+                                      </umab:GmailApplicationCard>
+                                    </Sequence>
+                                  </TryCatch.Try>
+                                  <TryCatch.Catches>
+                                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="556,21" sap2010:WorkflowViewState.IdRef="Catch`1_7">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ActivityAction x:TypeArguments="s:Exception">
+                                        <ActivityAction.Argument>
+                                          <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                                        </ActivityAction.Argument>
+                                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">
+                                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_24">err</CSharpReference>
+                                            </OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">
+                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_164">exception.ToString()</CSharpValue>
+                                            </InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </ActivityAction>
+                                    </Catch>
+                                  </TryCatch.Catches>
+                                </TryCatch>
+                                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logger workflow" sap:VirtualizedContainerService.HintSize="590,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Logger.xaml">
+                                  <ui:InvokeWorkflowFile.Arguments>
+                                    <InArgument x:TypeArguments="x:String" x:Key="workDir">
+                                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_170">workDir</CSharpValue>
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="msgTest">End of process send email.</InArgument>
+                                    <InOutArgument x:TypeArguments="x:String" x:Key="err">
+                                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">err</CSharpReference>
+                                    </InOutArgument>
+                                  </ui:InvokeWorkflowFile.Arguments>
+                                </ui:InvokeWorkflowFile>
+                              </Sequence>
+                              <FlowStep.Next>
+                                <FlowDecision x:Name="__ReferenceID7" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
+                                  <FlowDecision.Condition>
+                                    <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_150">String.IsNullOrEmpty(err)</CSharpValue>
+                                  </FlowDecision.Condition>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <av:Point x:Key="ShapeLocation">274.64166666666665,929.6199999999999</av:Point>
+                                      <av:Size x:Key="ShapeSize">79,87</av:Size>
+                                      <av:PointCollection x:Key="FalseConnector">353.64166666666665,973.1199999999999 500,973.1199999999999 500,1047</av:PointCollection>
+                                      <av:PointCollection x:Key="TrueConnector">274.64166666666665,973.1199999999999 119.81666666666666,973.1199999999999 119.81666666666666,1046.04</av:PointCollection>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <FlowDecision.True>
+                                    <FlowStep x:Name="__ReferenceID8">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">5.816666666666663,1046.04</av:Point>
+                                          <av:Size x:Key="ShapeSize">228,66</av:Size>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence DisplayName="exit" sap:VirtualizedContainerService.HintSize="228,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logger workflow" sap:VirtualizedContainerService.HintSize="377,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Logger.xaml">
+                                          <ui:InvokeWorkflowFile.Arguments>
+                                            <InArgument x:TypeArguments="x:String" x:Key="workDir">
+                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_179">workDir</CSharpValue>
+                                            </InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="msgTest">End process.</InArgument>
+                                            <InOutArgument x:TypeArguments="x:String" x:Key="err">
+                                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">err</CSharpReference>
+                                            </InOutArgument>
+                                          </ui:InvokeWorkflowFile.Arguments>
+                                        </ui:InvokeWorkflowFile>
+                                      </Sequence>
+                                    </FlowStep>
+                                  </FlowDecision.True>
+                                  <FlowDecision.False>
+                                    <FlowStep x:Name="__ReferenceID0">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <av:Point x:Key="ShapeLocation">386,1047</av:Point>
+                                          <av:Size x:Key="ShapeSize">228,66</av:Size>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence DisplayName="error" sap:VirtualizedContainerService.HintSize="228,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logger workflow" sap:VirtualizedContainerService.HintSize="377,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Logger.xaml">
+                                          <ui:InvokeWorkflowFile.Arguments>
+                                            <InArgument x:TypeArguments="x:String" x:Key="workDir">
+                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_177">workDir</CSharpValue>
+                                            </InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="msgTest">
+                                              <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_176">"Error: " + err</CSharpValue>
+                                            </InArgument>
+                                            <InOutArgument x:TypeArguments="x:String" x:Key="err">
+                                              <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_33">err</CSharpReference>
+                                            </InOutArgument>
+                                          </ui:InvokeWorkflowFile.Arguments>
+                                        </ui:InvokeWorkflowFile>
+                                      </Sequence>
+                                    </FlowStep>
+                                  </FlowDecision.False>
+                                </FlowDecision>
+                              </FlowStep.Next>
+                            </FlowStep>
+                          </FlowDecision.True>
+                          <FlowDecision.False>
+                            <x:Reference>__ReferenceID0</x:Reference>
+                          </FlowDecision.False>
+                        </FlowDecision>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowDecision.True>
+                  <FlowDecision.False>
+                    <x:Reference>__ReferenceID0</x:Reference>
+                  </FlowDecision.False>
+                </FlowDecision>
+              </FlowStep.Next>
             </FlowStep>
           </FlowDecision.True>
           <FlowDecision.False>
-            <FlowStep x:Name="__ReferenceID1">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">386,887</av:Point>
-                  <av:Size x:Key="ShapeSize">228,66</av:Size>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="error" sap:VirtualizedContainerService.HintSize="376,355" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error">
-                  <ui:LogMessage.Message>
-                    <InArgument x:TypeArguments="x:Object">
-                      <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">err</CSharpValue>
-                    </InArgument>
-                  </ui:LogMessage.Message>
-                </ui:LogMessage>
-                <ui:AppendLine DisplayName="Append Line" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="AppendLine_2" UseDefaultEncoding="False">
-                  <ui:AppendLine.FileName>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_35">logFile</CSharpValue>
-                    </InArgument>
-                  </ui:AppendLine.FileName>
-                  <ui:AppendLine.Text>
-                    <InArgument x:TypeArguments="x:String">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_42" xml:space="preserve">DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss") + " Error: "  +err</CSharpValue>
-                    </InArgument>
-                  </ui:AppendLine.Text>
-                </ui:AppendLine>
-              </Sequence>
-            </FlowStep>
+            <x:Reference>__ReferenceID0</x:Reference>
           </FlowDecision.False>
         </FlowDecision>
       </FlowStep.Next>
     </FlowStep>
-    <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID1</x:Reference>
+    <x:Reference>__ReferenceID0</x:Reference>
     <x:Reference>__ReferenceID2</x:Reference>
-    <FlowDecision DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <av:Point x:Key="ShapeLocation">274.64166666666665,438.53999999999996</av:Point>
-          <av:Size x:Key="ShapeSize">79,87</av:Size>
-          <av:PointCollection x:Key="TrueConnector">274.64166666666665,482.03999999999996 244.64166666666665,482.03999999999996 244.64166666666665,491.08 228,491.08</av:PointCollection>
-          <av:PointCollection x:Key="FalseConnector">353.64166666666665,482.03999999999996 500,482.03999999999996 500,887</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <FlowDecision.True>
-        <FlowStep x:Name="__ReferenceID3">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">0,458.08</av:Point>
-              <av:Size x:Key="ShapeSize">228,66</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">114,524.0799999999999 114,554.0799999999999 314.14166666666665,554.0799999999999 314.14166666666665,604.0799999999999</av:PointCollection>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="excel" sap:VirtualizedContainerService.HintSize="228,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </Sequence>
-          <FlowStep.Next>
-            <FlowDecision x:Name="__ReferenceID4" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <av:Point x:Key="ShapeLocation">274.64166666666665,604.0799999999999</av:Point>
-                  <av:Size x:Key="ShapeSize">79,87</av:Size>
-                  <av:PointCollection x:Key="TrueConnector">274.64166666666665,647.5799999999999 244.64166666666665,647.5799999999999 244.64166666666665,656.6199999999999 228,656.6199999999999</av:PointCollection>
-                  <av:PointCollection x:Key="FalseConnector">353.64166666666665,647.5799999999999 500,647.5799999999999 500,887</av:PointCollection>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <FlowDecision.True>
-                <FlowStep x:Name="__ReferenceID5">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">0,623.6199999999999</av:Point>
-                      <av:Size x:Key="ShapeSize">228,66</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">114,689.6199999999999 114,719.6199999999999 314.14166666666665,719.6199999999999 314.14166666666665,769.6199999999999</av:PointCollection>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="send email" sap:VirtualizedContainerService.HintSize="228,66" sap2010:WorkflowViewState.IdRef="Sequence_6">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </Sequence>
-                  <FlowStep.Next>
-                    <FlowDecision x:Name="__ReferenceID6" DisplayName="Flow Decision" sap:VirtualizedContainerService.HintSize="79,87" sap2010:WorkflowViewState.IdRef="FlowDecision_4">
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <av:Point x:Key="ShapeLocation">274.64166666666665,769.6199999999999</av:Point>
-                          <av:Size x:Key="ShapeSize">79,87</av:Size>
-                          <av:PointCollection x:Key="FalseConnector">353.64166666666665,813.1199999999999 500,813.1199999999999 500,887</av:PointCollection>
-                          <av:PointCollection x:Key="TrueConnector">274.64166666666665,813.1199999999999 119.81666666666666,813.1199999999999 119.81666666666666,886.04</av:PointCollection>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                      <FlowDecision.True>
-                        <FlowStep x:Name="__ReferenceID7">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">5.816666666666663,886.04</av:Point>
-                              <av:Size x:Key="ShapeSize">228,66</av:Size>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="exit" sap:VirtualizedContainerService.HintSize="228,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                            <sap:WorkflowViewStateService.ViewState>
-                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              </scg:Dictionary>
-                            </sap:WorkflowViewStateService.ViewState>
-                          </Sequence>
-                        </FlowStep>
-                      </FlowDecision.True>
-                      <FlowDecision.False>
-                        <x:Reference>__ReferenceID1</x:Reference>
-                      </FlowDecision.False>
-                    </FlowDecision>
-                  </FlowStep.Next>
-                </FlowStep>
-              </FlowDecision.True>
-              <FlowDecision.False>
-                <x:Reference>__ReferenceID1</x:Reference>
-              </FlowDecision.False>
-            </FlowDecision>
-          </FlowStep.Next>
-        </FlowStep>
-      </FlowDecision.True>
-      <FlowDecision.False>
-        <x:Reference>__ReferenceID1</x:Reference>
-      </FlowDecision.False>
-    </FlowDecision>
     <x:Reference>__ReferenceID3</x:Reference>
     <x:Reference>__ReferenceID4</x:Reference>
     <x:Reference>__ReferenceID5</x:Reference>
     <x:Reference>__ReferenceID6</x:Reference>
     <x:Reference>__ReferenceID7</x:Reference>
+    <x:Reference>__ReferenceID8</x:Reference>
   </Flowchart>
 </Activity>
